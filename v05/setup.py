@@ -421,7 +421,7 @@ class SetUp:
         furos = int(self.var_ao_raio_furos.get())
         raio = float(self.var_ao_raio_raio.get())
         desloc = float(self.var_ao_raio_desloc.get().replace('°',''))
-        ang = 360 // furos if furos else 0
+        ang = 360 / furos if furos else 0
 
         self.var_ao_raio_list = [
                 (round(cos(radians(ang*i+desloc))*raio/self.res+(self.leitura[0]-self.var_x_main)),
